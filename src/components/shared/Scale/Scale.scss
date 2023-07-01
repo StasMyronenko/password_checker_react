@@ -1,0 +1,35 @@
+@import '/src/styles/constants';
+
+.scale {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  .first, .second, .third{
+    background: $grey;
+  }
+}
+
+.short {
+  .first, .second, .third{
+    background: $red;
+  }
+}
+
+.easy {
+  .first{
+    background: $red;
+  }
+}
+
+.medium {
+  .first, .second{
+    background: $yellow;
+  }
+}
+
+.hard {
+  .first, .second, .third{
+    background: $green;
+  }
+}
