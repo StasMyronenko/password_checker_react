@@ -1,6 +1,6 @@
 import React, {FC} from 'react';
 
-import Point from '../Point/Point';
+import { Point } from '../Point/Point';
 
 import {STRENGTH_LEVEL} from '../../../constants/strengthLevel';
 
@@ -10,7 +10,7 @@ type ScaleProps = {
   strengthLevel: STRENGTH_LEVEL;
 }
 
-const Scale: FC<ScaleProps> = ({strengthLevel}) => {
+export const Scale: FC<ScaleProps> = ({strengthLevel}) => {
   return (
     <div className={`scale ${strengthLevel}`}>
       <Point classNames="first" />
@@ -19,5 +19,3 @@ const Scale: FC<ScaleProps> = ({strengthLevel}) => {
     </div>
   );
 };
-
-export default Scale;

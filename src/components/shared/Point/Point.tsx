@@ -5,10 +5,8 @@ type PointPros = {
   classNames?: string;
 }
 
-const Point:FC<PointPros> = ({classNames}) => {
+export const Point:FC<PointPros> = ({classNames}) => {
   return (
-    <div className={`point ${classNames}`} />
+    <div className={`point ${classNames}`} data-testid="Point" />
   );
 };
-
-export default Point;

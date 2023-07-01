@@ -1,12 +1,12 @@
-import React, {useMemo, useState} from 'react';
+import { useMemo, useState } from 'react';
 
-import Scale from '../../shared/Scale/Scale';
+import { Scale } from '../../shared/Scale/Scale';
 
-import {getPasswordsStrengthLevel} from '../../../utils/getPasswordsStrngthLevel/getPasswordsStrengthLevel';
+import { getPasswordsStrengthLevel } from '../../../utils/getPasswordsStrngthLevel/getPasswordsStrengthLevel';
 
 import './Password.scss';
 
-const Password = () => {
+export const Password = () => {
   const [password, setPassword] = useState<string>('');
   const strength = useMemo(() => getPasswordsStrengthLevel(password), [password]);
   return (
@@ -17,6 +17,7 @@ const Password = () => {
       <main>
         <div className="input-div">
           <input
+            data-testid="password-input"
             id="input-field"
             type="text"
             value={password}
@@ -29,4 +30,3 @@ const Password = () => {
   );
 };
 
-export default Password;

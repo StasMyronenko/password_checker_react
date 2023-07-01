@@ -1,10 +1,10 @@
 import React from 'react';
-import Password from './components/widgets/Password/Password';
+import { Password } from './components/widgets/Password/Password';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App" data-testid="App">
       <Password />
     </div>
 );

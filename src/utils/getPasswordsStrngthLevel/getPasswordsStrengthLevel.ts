@@ -1,4 +1,5 @@
-import {isDigitInText, isLettersInText, isSymbolInText, STRENGTH_LEVEL} from '../../constants/strengthLevel';
+import { STRENGTH_LEVEL } from '../../constants/strengthLevel';
+import { isDigitInText, isLettersInText, isSymbolInText } from '../validators/validators';
 
 export const getPasswordsStrengthLevel = (password: string): STRENGTH_LEVEL => {
   if (password.length === 0) {
@@ -15,7 +16,6 @@ export const getPasswordsStrengthLevel = (password: string): STRENGTH_LEVEL => {
 
   const sum = Number(isLetter) + Number(isDigit) + Number(isSymbol);
 
-  console.log(sum);
   if (sum === 1) return STRENGTH_LEVEL.EASY;
   if (sum === 2) return STRENGTH_LEVEL.MEDIUM;
   return STRENGTH_LEVEL.HARD;
